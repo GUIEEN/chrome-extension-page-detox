@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+
+    "name": "Page Detox",
+    "description": "Page Detox App is a light extension that helps to remove useless contents on the site and to focus on the content itself.",
+    "version": "0.0.1",
+
+    "action": {
+        "default_icon": {
+            "128": "images/lemon-slice-128.png"
+        },
+        "default_title": "Page Detox"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["https://stackoverflow.com/*"],
+            "js": ["./src/run_stackoverflow.js"],
+            "run_at": "document_start"
+        }
+    ],
+
+    "icons": {
+        "128": "images/lemon-slice-128.png"
+    }
+}
